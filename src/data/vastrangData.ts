@@ -117,8 +117,8 @@ export const CATEGORIES: Category[] = [
 export const HERO_SLIDES: HeroSlide[] = [
   {
     "id": 1,
-    "desktopImage": "https://cdn.pixabay.com/photo/2023/06/13/07/36/woman-8060193_1280.jpg",
-    "mobileImage": "https://cdn.pixabay.com/photo/2023/06/13/07/36/woman-8060193_1280.jpg",
+    "desktopImage": "/images/First.jpeg",
+    "mobileImage": "/images/First.jpeg",
     "title": "Grand Festive & Wedding Edit",
     "subtitle": "Pure Satin Silk, Georgette & Banarasi Elegance",
     "badge": "BUY 2 GET 1 FREE",
@@ -127,8 +127,8 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     "id": 2,
-    "desktopImage": "https://images.unsplash.com/photo-1618901185975-d59f7091bcfe?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
-    "mobileImage": "https://images.unsplash.com/photo-1618901185975-d59f7091bcfe?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "desktopImage": "/images/Second.jpeg",
+    "mobileImage": "/images/Second.jpeg",
     "title": "Ajrak Printed Pure Satin Silk Sarees",
     "subtitle": "Rich Pallu with Handcrafted Mirror Work",
     "badge": "FLAT 50% OFF",

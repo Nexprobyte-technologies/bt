@@ -67,8 +67,8 @@ export default function HeroSlider() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent sm:bg-gradient-to-r sm:from-black/70 sm:via-black/25 sm:to-transparent" />
 
             {/* Content Text Overlay */}
-            <div className="relative z-10 max-w-7xl mx-auto h-full flex flex-col justify-end sm:justify-center p-6 sm:p-12 lg:p-16 min-h-[440px] md:min-h-[580px] lg:min-h-[660px]">
-              <div className="max-w-xl text-white space-y-3 sm:space-y-4">
+            <div className="relative z-10 max-w-7xl mx-auto h-full flex flex-col items-center justify-center sm:items-start p-6 sm:p-12 lg:p-16 min-h-[440px] md:min-h-[580px] lg:min-h-[660px]">
+              <div className="max-w-xl text-center text-white space-y-3 sm:text-left sm:space-y-4">
                 <span className="inline-block px-3 py-1 bg-[#d0473e] text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-md animate-pulse">
                   {slide.badge}
                 </span>
@@ -81,7 +81,7 @@ export default function HeroSlider() {
                   {slide.subtitle}
                 </p>
 
-                <div className="pt-2 sm:pt-4 flex items-center gap-4">
+                <div className="pt-2 sm:pt-4 flex flex-wrap items-center justify-center gap-3 sm:justify-start sm:gap-4">
                   <a
                     href={slide.ctaLink}
                     className="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3 sm:py-3.5 bg-white hover:bg-[#7d4e48] text-stone-900 hover:text-white font-semibold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
