@@ -1,8 +1,28 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { getImageProps } from 'next/image';
 import { HERO_SLIDES } from '@/data/vastrangData';
 import { ChevronLeftIcon, ChevronRightIcon, ArrowRightIcon } from './Icons';
+
+const optimizedHeroImages = HERO_SLIDES.map((slide) => ({
+  desktop: getImageProps({
+    src: slide.desktopImage,
+    alt: slide.title,
+    width: 1920,
+    height: 1080,
+    quality: 75,
+    sizes: '100vw',
+  }).props,
+  mobile: getImageProps({
+    src: slide.mobileImage,
+    alt: slide.title,
+    width: 750,
+    height: 1000,
+    quality: 75,
+    sizes: '100vw',
+  }).props,
+}));
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -31,22 +51,17 @@ export default function HeroSlider() {
       >
         {HERO_SLIDES.map((slide, index) => (
           <div key={slide.id} className="w-full flex-shrink-0 relative min-h-[440px] md:min-h-[580px] lg:min-h-[660px]">
-            {/* Desktop Image */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={slide.desktopImage}
-              alt={slide.title}
-              className="hidden sm:block absolute inset-0 w-full h-full object-cover object-top"
-              loading={index === 0 ? "eager" : "lazy"}
-            />
-            {/* Mobile Image */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={slide.mobileImage}
-              alt={slide.title}
-              className="sm:hidden absolute inset-0 w-full h-full object-cover object-center"
-              loading={index === 0 ? "eager" : "lazy"}
-            />
+            <picture className="absolute inset-0 block h-full w-full">
+              <source media="(max-width: 639px)" srcSet={optimizedHeroImages[index].mobile.srcSet} sizes="100vw" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                {...optimizedHeroImages[index].desktop}
+                alt={slide.title}
+                className="absolute inset-0 h-full w-full object-cover object-top"
+                loading={index === 0 ? 'eager' : 'lazy'}
+                fetchPriority={index === 0 ? 'high' : 'auto'}
+              />
+            </picture>
 
             {/* Gradient Dark Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent sm:bg-gradient-to-r sm:from-black/70 sm:via-black/25 sm:to-transparent" />

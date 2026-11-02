@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import AnnouncementBar from '@/components/AnnouncementBar';
@@ -62,8 +63,7 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
       <Navbar />
       <main className="flex-1">
         <section className="relative isolate flex min-h-64 items-end overflow-hidden bg-stone-900 sm:min-h-80">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={collection.image} alt="" className="absolute inset-0 z-0 h-full w-full object-cover" />
+          <Image src={collection.image} alt="" fill sizes="100vw" preload className="z-0 object-cover" />
           <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/75 via-black/35 to-black/10" />
           <div className="relative z-20 mx-auto w-full max-w-7xl px-4 py-9 sm:px-6 sm:py-12 lg:px-8">
             <Link href="/" className="text-xs font-medium text-white/80 hover:text-white">Home / Collections</Link>

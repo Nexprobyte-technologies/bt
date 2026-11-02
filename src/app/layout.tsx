@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ShopProvider } from "@/context/ShopContext";
-import CartDrawer from "@/components/CartDrawer";
-import QuickViewModal from "@/components/QuickViewModal";
-import SearchModal from "@/components/SearchModal";
 import MobileBottomNav from "@/components/MobileBottomNav";
-import Toast from "@/components/Toast";
+import ShopOverlays from "@/components/ShopOverlays";
 
 export const metadata: Metadata = {
   title: "Charmiqe | Designer Ethnic and Bridal Wear",
@@ -26,11 +23,8 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col bg-white text-stone-900 antialiased selection:bg-[#7d4e48] selection:text-white">
         <ShopProvider>
           {children}
-          <CartDrawer />
-          <QuickViewModal />
-          <SearchModal />
+          <ShopOverlays />
           <MobileBottomNav />
-          <Toast />
         </ShopProvider>
       </body>
     </html>

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useShop, FREE_SHIPPING_THRESHOLD } from '@/context/ShopContext';
 import { XIcon, PlusIcon, MinusIcon, ShoppingBagIcon, TruckIcon } from './Icons';
 import CheckoutModal from './CheckoutModal';
@@ -106,10 +107,11 @@ export default function CartDrawer() {
               ) : (
                 cart.map((item) => (
                   <div key={item.id} className="flex gap-3 pb-4 border-b border-stone-100 last:border-0">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src={item.product.image}
                       alt={item.product.title}
+                      width={80}
+                      height={96}
                       className="w-20 h-24 object-cover object-top rounded-lg bg-stone-100 border border-stone-200 flex-shrink-0"
                     />
                     <div className="flex-1 flex flex-col justify-between">

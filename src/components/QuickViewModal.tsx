@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useShop } from '@/context/ShopContext';
 import { Product } from '@/data/vastrangData';
 import { getProductWhatsAppHref } from '@/lib/productWhatsApp';
@@ -52,11 +53,12 @@ function QuickViewContent({
       {/* Left Column: Image Gallery */}
       <div className="w-full md:w-1/2 p-4 sm:p-6 bg-stone-50 flex flex-col justify-between">
         <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-stone-200 border border-stone-200 shadow-inner">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={selectedImage}
             alt={product.title}
-            className="w-full h-full object-cover object-top transition duration-300"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover object-top transition duration-300"
           />
 
           {product.badge && (
@@ -74,8 +76,7 @@ function QuickViewContent({
               selectedImage === product.image ? 'border-[#7d4e48]' : 'border-transparent opacity-70'
             }`}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={product.image} alt="Thumbnail 1" className="w-full h-full object-cover object-top" />
+            <Image src={product.image} alt="Thumbnail 1" width={56} height={72} className="h-full w-full object-cover object-top" />
           </button>
           {product.hoverImage && (
             <button
@@ -84,8 +85,7 @@ function QuickViewContent({
                 selectedImage === product.hoverImage ? 'border-[#7d4e48]' : 'border-transparent opacity-70'
               }`}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={product.hoverImage} alt="Thumbnail 2" className="w-full h-full object-cover object-top" />
+              <Image src={product.hoverImage} alt="Thumbnail 2" width={56} height={72} className="h-full w-full object-cover object-top" />
             </button>
           )}
         </div>

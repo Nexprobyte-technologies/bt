@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { TruckIcon, CreditCardIcon, HeartIcon, RotateCcwIcon } from './Icons';
 

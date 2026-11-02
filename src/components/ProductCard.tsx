@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Product } from '@/data/vastrangData';
 import { useShop } from '@/context/ShopContext';
 import { getProductWhatsAppHref } from '@/lib/productWhatsApp';
@@ -44,11 +45,12 @@ export default function ProductCard({ product }: ProductCardProps) {
       {/* Media Image Container (Aspect Ratio 3:4) */}
       <div className="relative aspect-[3/4] w-full overflow-hidden bg-stone-100 cursor-pointer" onClick={() => openQuickView(product)}>
         {/* Primary Image */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={product.image}
           alt={product.title}
-          className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-700 ${
+          fill
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          className={`object-cover object-top transition-all duration-700 ${
             isHovered && product.hoverImage ? 'opacity-0 scale-105' : 'opacity-100 scale-100'
           }`}
           loading="lazy"
@@ -56,11 +58,12 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         {/* Hover / Secondary Image */}
         {product.hoverImage && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             src={product.hoverImage}
             alt={`${product.title} alternate view`}
-            className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-700 ${
+            fill
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            className={`object-cover object-top transition-all duration-700 ${
               isHovered ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
             }`}
             loading="lazy"

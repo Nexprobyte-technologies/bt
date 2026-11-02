@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { HOME_COLLECTIONS } from '@/data/vastrangData';
 
@@ -19,12 +20,13 @@ export default function CategoryList() {
               href={`/collections/${category.id}`}
               className="group relative isolate aspect-[4/5] overflow-hidden rounded-lg bg-stone-200"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={category.image}
                 alt={category.name}
+                fill
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 17vw"
                 loading="lazy"
-                className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="z-0 object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <span className="absolute inset-0 z-10 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
               {category.badge && (

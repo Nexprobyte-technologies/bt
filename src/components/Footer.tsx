@@ -1,9 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
 import { STORE_INFO } from '@/data/vastrangData';
 import { WhatsAppIcon, InstagramIcon } from './Icons';
-import CustomerCareModal, { PolicyTab } from './CustomerCareModal';
+import type { PolicyTab } from './CustomerCareModal';
+
+const CustomerCareModal = dynamic(() => import('./CustomerCareModal'), { ssr: false });
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -227,12 +230,14 @@ export default function Footer() {
       </footer>
 
       {/* Customer Care Modal for Policies */}
-      <CustomerCareModal
-        isOpen={modalOpen}
-        activeTab={activeTab}
-        onClose={() => setModalOpen(false)}
-        onTabChange={(tab) => setActiveTab(tab)}
-      />
+      {modalOpen && (
+        <CustomerCareModal
+          isOpen
+          activeTab={activeTab}
+          onClose={() => setModalOpen(false)}
+          onTabChange={(tab) => setActiveTab(tab)}
+        />
+      )}
     </>
   );
 }

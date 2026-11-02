@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import Image from 'next/image';
 import { useShop } from '@/context/ShopContext';
 import { PRODUCTS } from '@/data/vastrangData';
 import { getProductWhatsAppHref } from '@/lib/productWhatsApp';
@@ -108,10 +109,11 @@ export default function SearchModal() {
                         openQuickView(p);
                       }}
                     >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src={p.image}
                         alt={p.title}
+                        width={56}
+                        height={64}
                         className="w-14 h-16 object-cover object-top rounded-lg bg-stone-100 border border-stone-200 flex-shrink-0"
                       />
                       <div>

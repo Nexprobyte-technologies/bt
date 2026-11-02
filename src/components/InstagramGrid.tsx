@@ -1,6 +1,5 @@
-'use client';
-
 import React from 'react';
+import Image from 'next/image';
 import { INSTAGRAM_POSTS, STORE_INFO } from '@/data/vastrangData';
 import { InstagramIcon, HeartIcon } from './Icons';
 
@@ -33,11 +32,12 @@ export default function InstagramGrid() {
               rel="noopener noreferrer"
               className="group relative aspect-[3/4] rounded-xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 block"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={post.image}
                 alt={`Instagram look by ${post.tag}`}
-                className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                fill
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                className="object-cover object-top group-hover:scale-110 transition-transform duration-500"
                 loading="lazy"
               />
 
