@@ -36,7 +36,7 @@ export default function HeroSlider() {
             <img
               src={slide.desktopImage}
               alt={slide.title}
-              className="hidden sm:block absolute inset-0 w-full h-full object-cover object-center"
+              className="hidden sm:block absolute inset-0 w-full h-full object-cover object-top"
               loading={index === 0 ? "eager" : "lazy"}
             />
             {/* Mobile Image */}

@@ -117,7 +117,7 @@ export const CATEGORIES: Category[] = [
 export const HERO_SLIDES: HeroSlide[] = [
   {
     "id": 1,
-    "desktopImage": "https://vastrang.in/cdn/shop/files/web.png?v=1790404859&width=2000",
+    "desktopImage": "https://cdn.pixabay.com/photo/2023/06/13/07/36/woman-8060193_1280.jpg",
     "mobileImage": "https://vastrang.in/cdn/shop/files/ChatGPT_Image_Sep_26_2026_12_10_21_PM.png?v=1790404876&width=1200",
     "title": "Grand Festive & Wedding Edit",
     "subtitle": "Pure Satin Silk, Georgette & Banarasi Elegance",
@@ -127,7 +127,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     "id": 2,
-    "desktopImage": "https://vastrang.in/cdn/shop/files/ChatGPT_Image_Sep_28_2026_10_53_51_AM.png?v=1790573146&width=2000",
+    "desktopImage": "https://images.unsplash.com/photo-1618901185975-d59f7091bcfe?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     "mobileImage": "https://vastrang.in/cdn/shop/files/c29e0138-97b1-4a2c-ad82-8f2a85068c57.png?v=1790573168&width=1200",
     "title": "Ajrak Printed Pure Satin Silk Sarees",
     "subtitle": "Rich Pallu with Handcrafted Mirror Work",
