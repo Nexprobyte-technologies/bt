@@ -3,10 +3,11 @@
 import React, { useState, useMemo } from 'react';
 import { useShop } from '@/context/ShopContext';
 import { PRODUCTS } from '@/data/vastrangData';
-import { SearchIcon, XIcon, ShoppingBagIcon } from './Icons';
+import { getProductWhatsAppHref } from '@/lib/productWhatsApp';
+import { SearchIcon, XIcon, WhatsAppIcon } from './Icons';
 
 export default function SearchModal() {
-  const { isSearchOpen, setIsSearchOpen, openQuickView, addToCart } = useShop();
+  const { isSearchOpen, setIsSearchOpen, openQuickView } = useShop();
   const [query, setQuery] = useState('');
 
   const filteredProducts = useMemo(() => {
@@ -130,16 +131,16 @@ export default function SearchModal() {
                       </div>
                     </div>
 
-                    <button
-                      onClick={() => {
-                        addToCart(p, 1);
-                        setIsSearchOpen(false);
-                      }}
+                    <a
+                      href={getProductWhatsAppHref(p)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsSearchOpen(false)}
                       className="p-2 rounded-full bg-stone-100 hover:bg-[#7d4e48] text-stone-700 hover:text-white transition flex-shrink-0"
-                      aria-label="Add to cart"
+                      aria-label={`Ask about ${p.title} on WhatsApp`}
                     >
-                      <ShoppingBagIcon className="w-4 h-4" />
-                    </button>
+                      <WhatsAppIcon className="w-4 h-4" />
+                    </a>
                   </div>
                 ))
               )}

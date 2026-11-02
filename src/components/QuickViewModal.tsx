@@ -3,15 +3,16 @@
 import React, { useState, useEffect } from 'react';
 import { useShop } from '@/context/ShopContext';
 import { Product } from '@/data/vastrangData';
+import { getProductWhatsAppHref } from '@/lib/productWhatsApp';
 import {
   XIcon,
   StarIcon,
   HeartIcon,
-  ShoppingBagIcon,
   PlusIcon,
   MinusIcon,
   TruckIcon,
   ShieldCheckIcon,
+  WhatsAppIcon,
 } from './Icons';
 
 function QuickViewContent({
@@ -21,7 +22,7 @@ function QuickViewContent({
   product: Product;
   onClose: () => void;
 }) {
-  const { addToCart, toggleWishlist, isWishlisted } = useShop();
+  const { toggleWishlist, isWishlisted } = useShop();
 
   const [selectedImage, setSelectedImage] = useState<string>(product.image);
   const [selectedColor, setSelectedColor] = useState<string>(
@@ -36,11 +37,6 @@ function QuickViewContent({
   const sizeOptions = product.isSalwarSuit
     ? ['S', 'M', 'L', 'XL', 'XXL', '3XL']
     : ['Free Size (Saree with Blouse Piece)'];
-
-  const handleAdd = () => {
-    addToCart(product, quantity, selectedColor, selectedSize);
-    onClose();
-  };
 
   return (
     <div className="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden z-10 flex flex-col md:flex-row">
@@ -211,13 +207,19 @@ function QuickViewContent({
         {/* CTAs */}
         <div className="space-y-2.5 pt-2 border-t border-stone-100">
           <div className="flex gap-2">
-            <button
-              onClick={handleAdd}
+            <a
+              href={getProductWhatsAppHref(product, {
+                color: selectedColor,
+                size: selectedSize,
+                quantity,
+              })}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex-1 py-3 px-6 bg-[#7d4e48] hover:bg-[#633b36] text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-xl shadow-md transition flex items-center justify-center gap-2"
             >
-              <ShoppingBagIcon className="w-4 h-4" />
-              <span>Add to Bag</span>
-            </button>
+              <WhatsAppIcon className="w-4 h-4" />
+              <span>Ask on WhatsApp</span>
+            </a>
             <button
               onClick={() => toggleWishlist(product.id)}
               className={`p-3 rounded-xl border border-stone-200 hover:border-rose-400 transition flex items-center justify-center ${

@@ -105,7 +105,7 @@ export default function CustomerCareModal({
               <div className="space-y-4">
                 <div>
                   <h3 className="font-serif text-base sm:text-lg font-bold text-stone-900 mb-1">
-                    Track Your Vastrang Order
+                    Track Your Charmiqe Order
                   </h3>
                   <p className="text-stone-500 text-xs">
                     Enter your Order ID (e.g., VST-9842) or 10-digit mobile number to get live dispatch updates.
@@ -183,7 +183,7 @@ export default function CustomerCareModal({
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-stone-900 font-semibold text-base">
                   <ShieldCheckIcon className="w-5 h-5 text-[#7d4e48]" />
-                  <h4>House Of Vastrang Customer Care</h4>
+                  <h4>Charmiqe Customer Care</h4>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                   <div className="p-3 bg-stone-50 rounded-xl border border-stone-200">

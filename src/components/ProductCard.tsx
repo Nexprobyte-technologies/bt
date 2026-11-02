@@ -3,14 +3,15 @@
 import React, { useState } from 'react';
 import { Product } from '@/data/vastrangData';
 import { useShop } from '@/context/ShopContext';
-import { HeartIcon, EyeIcon, ShoppingBagIcon, StarIcon } from './Icons';
+import { getProductWhatsAppHref } from '@/lib/productWhatsApp';
+import { HeartIcon, EyeIcon, StarIcon, WhatsAppIcon } from './Icons';
 
 interface ProductCardProps {
   product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  const { addToCart, toggleWishlist, isWishlisted, openQuickView } = useShop();
+  const { toggleWishlist, isWishlisted, openQuickView } = useShop();
   const [selectedColor, setSelectedColor] = useState<string>(
     product.colors && product.colors.length > 0 ? product.colors[0] : ''
   );
@@ -110,18 +111,18 @@ export default function ProductCard({ product }: ProductCardProps) {
           </button>
         </div>
 
-        {/* Instant Select Options / Add to Cart Overlay on Desktop */}
+        {/* WhatsApp inquiry on desktop */}
         <div className="absolute bottom-3 left-3 right-3 z-10 hidden sm:block opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              addToCart(product, 1, selectedColor);
-            }}
+          <a
+            href={getProductWhatsAppHref(product, { color: selectedColor })}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
             className="w-full py-2.5 px-4 bg-white/95 hover:bg-[#7d4e48] text-stone-900 hover:text-white font-semibold text-xs tracking-wider uppercase rounded-lg shadow-lg backdrop-blur-xs flex items-center justify-center gap-2 transition-all duration-200"
           >
-            <ShoppingBagIcon className="w-4 h-4" />
-            <span>Select Options</span>
-          </button>
+            <WhatsAppIcon className="w-4 h-4" />
+            <span>Ask on WhatsApp</span>
+          </a>
         </div>
       </div>
 
@@ -190,14 +191,16 @@ export default function ProductCard({ product }: ProductCardProps) {
             )}
           </div>
 
-          {/* Mobile Instant Add Button */}
-          <button
-            onClick={() => addToCart(product, 1, selectedColor)}
+          {/* Mobile WhatsApp inquiry */}
+          <a
+            href={getProductWhatsAppHref(product, { color: selectedColor })}
+            target="_blank"
+            rel="noopener noreferrer"
             className="sm:hidden p-1.5 rounded-full bg-[#7d4e48] text-white hover:bg-[#633b36] shadow-sm transition"
-            aria-label="Add to cart"
+            aria-label={`Ask about ${product.title} on WhatsApp`}
           >
-            <ShoppingBagIcon className="w-4 h-4" />
-          </button>
+            <WhatsAppIcon className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </div>

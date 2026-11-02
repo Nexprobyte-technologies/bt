@@ -42,10 +42,10 @@ export interface HeroSlide {
 }
 
 export const STORE_INFO = {
-  name: "House Of Vastrang",
+  name: "Charmiqe",
   tagline: "Online Buy Sari, Salwar Suit, Gown, Lehengas, Kurti",
-  phone: "+91 98765 43210",
-  whatsapp: "+91 98765 43210",
+  phone: "+91 95148 79599",
+  whatsapp: "+91 95148 79599",
   email: "support@vastrang.in",
   address: "Surat Textile Market, Surat, Gujarat - 395002",
   hours: "Mon - Sat: 10:00 AM - 7:00 PM IST",
@@ -67,7 +67,7 @@ export const CATEGORIES: Category[] = [
   {
     "id": "saree",
     "name": "Saree",
-    "image": "https://vastrang.in/cdn/shop/files/icons8-saree-48_1_small_50b66a77-ea67-4794-969d-91d5ded54896.png",
+    "image": "https://vastrang.in/cdn/shop/files/IMG_4530_2d5f619e-52b8-4f5a-ac11-d426d3330f87.jpg?v=1792997560&width=3941",
     "link": "#saree",
     "count": "350+ Designs",
     "badge": "Popular"
@@ -992,42 +992,42 @@ export const INSTAGRAM_POSTS = [
     image: "https://vastrang.in/cdn/shop/files/IMG_4530_2d5f619e-52b8-4f5a-ac11-d426d3330f87.jpg?v=1792997560&width=600",
     likes: "2.4k",
     comments: "142",
-    tag: "@vastrang.in"
+    tag: "Charmiqe"
   },
   {
     id: 2,
     image: "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-10-27at13.37.56.jpg?v=1793090642&width=600",
     likes: "3.8k",
     comments: "215",
-    tag: "@vastrang.in"
+    tag: "Charmiqe"
   },
   {
     id: 3,
     image: "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-10-22at15.08.19.jpg?v=1792664066&width=600",
     likes: "1.9k",
     comments: "98",
-    tag: "@vastrang.in"
+    tag: "Charmiqe"
   },
   {
     id: 4,
     image: "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-09-23at07.16.19.jpg?v=1790145371&width=600",
     likes: "4.2k",
     comments: "304",
-    tag: "@vastrang.in"
+    tag: "Charmiqe"
   },
   {
     id: 5,
     image: "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-10-15at17.38.25.jpg?v=1792066792&width=600",
     likes: "5.1k",
     comments: "412",
-    tag: "@vastrang.in"
+    tag: "Charmiqe"
   },
   {
     id: 6,
     image: "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-08-18at1.07.14PM_1.jpg?v=1788610390&width=600",
     likes: "2.9k",
     comments: "187",
-    tag: "@vastrang.in"
+    tag: "Charmiqe"
   }
 ];
 
@@ -1055,8 +1055,47 @@ export const TESTIMONIALS = [
     name: "Kavita Patel",
     location: "Ahmedabad",
     rating: 5,
-    comment: "Vastrang has become my go-to for ethnic wear. The salwar suit fitting and fabric quality are top tier. Customer care on WhatsApp helped me with sizing too.",
+    comment: "Charmiqe has become my go-to for ethnic wear. The salwar suit fitting and fabric quality are top tier. Customer care on WhatsApp helped me with sizing too.",
     product: "Roman Silk Straight Kurta Set",
     verified: true
   }
+];
+
+export const HOME_COLLECTIONS = [
+  {
+    id: "featured-collection",
+    name: "Featured Collection",
+    image: PRODUCTS[0].image,
+    badge: "Featured",
+  },
+  {
+    id: "trending-collection",
+    name: "Trending Collection",
+    image: PRODUCTS.find((product) => product.isTrending)?.image ?? PRODUCTS[0].image,
+    badge: "Trending",
+  },
+  {
+    id: "clearance-sale",
+    name: "Clearance Sale",
+    image: PRODUCTS.find((product) => product.isClearance)?.image ?? PRODUCTS[0].image,
+    badge: "Sale",
+  },
+  {
+    id: "best-seller",
+    name: "Best Seller",
+    image: PRODUCTS.find((product) => product.isBestSeller)?.image ?? PRODUCTS[0].image,
+    badge: "Popular",
+  },
+  {
+    id: "new-collection",
+    name: "New Collection",
+    image: PRODUCTS[PRODUCTS.length - 1].image,
+    badge: "New",
+  },
+  {
+    id: "salwar-suit",
+    name: "Salwar Suit",
+    image: PRODUCTS.find((product) => product.isSalwarSuit)?.image ?? PRODUCTS[0].image,
+    badge: "Collection",
+  },
 ];

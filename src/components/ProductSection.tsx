@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Product } from '@/data/vastrangData';
 import ProductCard from './ProductCard';
-import { ArrowRightIcon } from './Icons';
+import { ArrowRightIcon, ChevronLeftIcon, ChevronRightIcon } from './Icons';
 
 interface ProductSectionProps {
   id: string;
@@ -27,10 +27,40 @@ export default function ProductSection({
   bgColor = 'bg-white',
 }: ProductSectionProps) {
   const [activeFilter, setActiveFilter] = useState('All');
+  const [isAutoPaused, setIsAutoPaused] = useState(false);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   const filteredProducts = activeFilter === 'All'
     ? products
     : products.filter((p) => p.title.toLowerCase().includes(activeFilter.toLowerCase()));
+
+  const scrollCarousel = (direction: -1 | 1) => {
+    if (!carouselRef.current) return;
+    carouselRef.current.scrollBy({
+      left: direction * carouselRef.current.clientWidth * 0.85,
+      behavior: 'smooth',
+    });
+  };
+
+  useEffect(() => {
+    if (isAutoPaused || filteredProducts.length < 2) return;
+
+    const timer = window.setInterval(() => {
+      const carousel = carouselRef.current;
+      if (!carousel) return;
+
+      const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+      if (maxScroll <= 0) return;
+
+      if (carousel.scrollLeft >= maxScroll - 8) {
+        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        carousel.scrollBy({ left: carousel.clientWidth * 0.85, behavior: 'smooth' });
+      }
+    }, 4000);
+
+    return () => window.clearInterval(timer);
+  }, [filteredProducts.length, isAutoPaused]);
 
   return (
     <section id={id} className={`py-14 sm:py-20 ${bgColor} border-b border-stone-200/50`}>
@@ -51,29 +81,67 @@ export default function ProductSection({
           </div>
 
           {/* Filter Pills if provided */}
-          {filterOptions && filterOptions.length > 0 && (
-            <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
-              {filterOptions.map((filter) => (
-                <button
-                  key={filter}
-                  onClick={() => setActiveFilter(filter)}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide whitespace-nowrap transition-all ${
-                    activeFilter === filter
-                      ? 'bg-[#7d4e48] text-white shadow-xs'
-                      : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
-                  }`}
-                >
-                  {filter}
-                </button>
-              ))}
+          <div className="flex max-w-full items-center gap-3">
+            {filterOptions && filterOptions.length > 0 && (
+              <div className="flex min-w-0 items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+                {filterOptions.map((filter) => (
+                  <button
+                    key={filter}
+                    onClick={() => {
+                      setActiveFilter(filter);
+                      carouselRef.current?.scrollTo({ left: 0, behavior: 'smooth' });
+                    }}
+                    className={`px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide whitespace-nowrap transition-all ${
+                      activeFilter === filter
+                        ? 'bg-[#7d4e48] text-white shadow-xs'
+                        : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
+                    }`}
+                  >
+                    {filter}
+                  </button>
+                ))}
+              </div>
+            )}
+            <div className="ml-auto flex shrink-0 items-center gap-2">
+              <button
+                type="button"
+                onClick={() => scrollCarousel(-1)}
+                aria-label={`Previous ${title} products`}
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-stone-300 text-stone-700 transition hover:border-[#7d4e48] hover:bg-[#7d4e48] hover:text-white"
+              >
+                <ChevronLeftIcon className="h-4 w-4" />
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollCarousel(1)}
+                aria-label={`Next ${title} products`}
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-stone-300 text-stone-700 transition hover:border-[#7d4e48] hover:bg-[#7d4e48] hover:text-white"
+              >
+                <ChevronRightIcon className="h-4 w-4" />
+              </button>
             </div>
-          )}
+          </div>
         </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-7">
+        {/* Product Carousel */}
+        <div
+          ref={carouselRef}
+          className="flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth pb-3 no-scrollbar sm:gap-5 lg:gap-7"
+          onMouseEnter={() => setIsAutoPaused(true)}
+          onMouseLeave={() => setIsAutoPaused(false)}
+          onFocusCapture={() => setIsAutoPaused(true)}
+          onBlurCapture={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+              setIsAutoPaused(false);
+            }
+          }}
+          onTouchStart={() => setIsAutoPaused(true)}
+          onTouchEnd={() => setIsAutoPaused(false)}
+        >
           {filteredProducts.slice(0, 8).map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <div key={product.id} className="w-[calc((100%-0.75rem)/2)] shrink-0 snap-start sm:w-[calc((100%-2.5rem)/3)] lg:w-[calc((100%-5.25rem)/4)]">
+              <ProductCard product={product} />
+            </div>
           ))}
         </div>
 

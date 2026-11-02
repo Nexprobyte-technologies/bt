@@ -3,44 +3,30 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import Navbar from "@/components/Navbar";
 import HeroSlider from "@/components/HeroSlider";
 import CategoryList from "@/components/CategoryList";
-import WishlistSection from "@/components/WishlistSection";
 import ProductSection from "@/components/ProductSection";
-import ClearanceSection from "@/components/ClearanceSection";
 import MarqueeBanner from "@/components/MarqueeBanner";
 import BrandStory from "@/components/BrandStory";
 import TrustBadges from "@/components/TrustBadges";
 import InstagramGrid from "@/components/InstagramGrid";
-import CustomerReviews from "@/components/CustomerReviews";
 import Footer from "@/components/Footer";
+import { WhatsAppIcon } from "@/components/Icons";
 import { PRODUCTS } from "@/data/vastrangData";
 
 export default function Home() {
-  const trendingProducts = PRODUCTS.filter((p) => p.isTrending);
-  const bestSellerProducts = PRODUCTS.filter((p) => p.isBestSeller);
-  const clearanceProducts = PRODUCTS.filter((p) => p.isClearance);
-  const salwarSuitProducts = PRODUCTS.filter((p) => p.isSalwarSuit);
-  const lehengaProducts = PRODUCTS.filter((p) => p.isLehenga);
-  const blouseProducts = PRODUCTS.filter((p) => p.isBlouse);
+  const trendingProducts = PRODUCTS.filter((product) => product.isTrending);
+  const bestSellerProducts = PRODUCTS.filter((product) => product.isBestSeller);
+  const clearanceProducts = PRODUCTS.filter((product) => product.isClearance);
+  const salwarSuitProducts = PRODUCTS.filter((product) => product.isSalwarSuit);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Top Banner & Sticky Navigation */}
+    <div className="flex min-h-screen flex-col">
       <AnnouncementBar />
       <Navbar />
 
       <main className="flex-1">
-        {/* Hero Slideshow Banner */}
         <HeroSlider />
+        <div id="categories"><CategoryList /></div>
 
-        {/* Categories Circle Grid */}
-        <div id="categories">
-          <CategoryList />
-        </div>
-
-        {/* Dynamic Wishlist Section */}
-        <WishlistSection />
-
-        {/* Featured Collection: Trending Collection */}
         <div id="trending">
           <ProductSection
             id="saree"
@@ -49,14 +35,10 @@ export default function Home() {
             subtitle="Hand-block Ajrak prints, pure satin silks, and glistening mirror work sarees."
             products={trendingProducts}
             filterOptions={["All", "Satin Silk", "Georgette", "Chanderi"]}
-            viewAllLink="#saree"
+            viewAllLink="/collections/saree"
           />
         </div>
 
-        {/* Moving Ticker Ribbon */}
-        <MarqueeBanner />
-
-        {/* Featured Collection: Best Selling */}
         <ProductSection
           id="bestseller"
           tag="Top Rated Classics"
@@ -64,14 +46,22 @@ export default function Home() {
           subtitle="Bridal Banarasi tissue silks, Kanjivaram zari weaves, and crunchy silk sarees."
           products={bestSellerProducts}
           filterOptions={["All", "Silk", "Banarasi", "Zari"]}
-          viewAllLink="#bestseller"
+          viewAllLink="/collections/best-seller"
           bgColor="bg-[#fcfaf7]"
         />
 
-        {/* Clearance Sale with Live Countdown */}
-        <ClearanceSection products={clearanceProducts} />
+        <MarqueeBanner />
 
-        {/* Salwar Suit Special Collection */}
+        <ProductSection
+          id="clearance"
+          tag="Clearance Sale"
+          title="Clearance Sale"
+          subtitle="Shop special prices on selected Charmiqe favorites."
+          products={clearanceProducts}
+          viewAllLink="/collections/clearance-sale"
+          bgColor="bg-[#fcfaf7]"
+        />
+
         <ProductSection
           id="salwar-suit"
           tag="Ready To Wear Sets"
@@ -79,47 +69,25 @@ export default function Home() {
           subtitle="Elegant designer straight kurta sets with trousers and embellished dupattas."
           products={salwarSuitProducts}
           filterOptions={["All", "Roman Silk", "Cotton"]}
-          viewAllLink="#salwar-suit"
+          viewAllLink="/collections/salwar-suit"
         />
 
-        {/* Lehenga Choli Special Collection */}
-        <ProductSection
-          id="lehenga"
-          tag="Bridal & Festive"
-          title="Lehenga Choli Collection"
-          subtitle="Grand bridal velvet and flared georgette lehengas with heavy zari and foil embroidery."
-          products={lehengaProducts}
-          filterOptions={["All", "Velvet", "Georgette", "Organza"]}
-          viewAllLink="#lehenga"
-          bgColor="bg-[#fcfaf7]"
-        />
-
-        {/* Designer Blouses Collection */}
-        <ProductSection
-          id="blouse"
-          tag="Stitched & Ready To Wear"
-          title="Designer Blouses"
-          subtitle="Padded velvet, pure raw silk, and brocade Banarasi crop blouses with hand embroidery."
-          products={blouseProducts}
-          filterOptions={["All", "Raw Silk", "Velvet", "Brocade"]}
-          viewAllLink="#blouse"
-        />
-
-        {/* Brand Story Editorial */}
         <BrandStory />
-
-        {/* 4 Pillars Trust Badges */}
         <TrustBadges />
-
-        {/* Instagram Lookbook Gallery */}
         <InstagramGrid />
-
-        {/* Customer Reviews & Ratings */}
-        <CustomerReviews />
       </main>
 
-      {/* Footer with Support & Policy Modals */}
       <Footer />
+      <a
+        href="https://wa.me/919514879599"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with Charmiqe on WhatsApp at +91 95148 79599"
+        title="Chat with us on WhatsApp: +91 95148 79599"
+        className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:scale-105 hover:bg-[#1fb957] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]"
+      >
+        <WhatsAppIcon className="h-7 w-7" />
+      </a>
     </div>
   );
 }

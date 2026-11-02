@@ -13,7 +13,7 @@ export default function InstagramGrid() {
         <div className="text-center max-w-xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 text-[#7d4e48] text-xs font-semibold uppercase tracking-wider mb-2">
             <InstagramIcon className="w-3.5 h-3.5" />
-            <span>@vastrang.in</span>
+            <span>Charmiqe</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-4xl font-bold text-stone-900">
             Follow Us on Instagram
@@ -65,7 +65,7 @@ export default function InstagramGrid() {
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white font-medium text-xs tracking-wider uppercase shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5"
           >
             <InstagramIcon className="w-4 h-4" />
-            <span>Follow @vastrang.in on Instagram</span>
+            <span>Follow Charmiqe on Instagram</span>
           </a>
         </div>
 

@@ -46,7 +46,7 @@ export default function Footer() {
             <div className="w-full lg:w-auto">
               {subscribed ? (
                 <div className="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full text-center text-xs font-semibold text-white animate-fadeIn">
-                  🎉 Welcome to the Vastrang Family! Check your inbox for your ₹200 coupon code.
+                  🎉 Welcome to the Charmiqe Family! Check your inbox for your ₹200 coupon code.
                 </div>
               ) : (
                 <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 w-full max-w-md">
@@ -75,11 +75,8 @@ export default function Footer() {
             {/* Column 1: Brand Info */}
             <div className="lg:col-span-2 space-y-4">
               <div className="flex flex-col">
-                <span className="text-[9px] tracking-[0.3em] font-medium text-amber-300 uppercase">
-                  House Of
-                </span>
                 <span className="font-serif text-2xl font-bold tracking-wider text-white">
-                  VASTRANG
+                  Charmiqe
                 </span>
                 <span className="text-[8px] tracking-[0.2em] text-stone-400 uppercase">
                   {STORE_INFO.tagline}
@@ -136,7 +133,7 @@ export default function Footer() {
                 <li>
                   <span className="block text-[10px] text-stone-500 uppercase">Email Us:</span>
                   <a href={`mailto:${STORE_INFO.email}`} className="text-stone-300 hover:text-white transition">
-                    {STORE_INFO.email}
+                    Email Customer Care
                   </a>
                 </li>
                 <li>
@@ -204,7 +201,7 @@ export default function Footer() {
 
           {/* Bottom Bar: Copyright & Payment Badges */}
           <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-stone-400">
-            <p>© 2026 House Of Vastrang (vastrang.in). All Rights Reserved.</p>
+            <p>© 2026 Charmiqe. All Rights Reserved.</p>
             
             {/* Payment Badges */}
             <div className="flex flex-wrap items-center gap-2 text-[10px]">

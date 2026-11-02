@@ -8,11 +8,11 @@ import MobileBottomNav from "@/components/MobileBottomNav";
 import Toast from "@/components/Toast";
 
 export const metadata: Metadata = {
-  title: "vastrang.in - Online Buy Sari, Salwar Suit, Gown, Lehengas, Kurti",
+  title: "Charmiqe | Designer Ethnic and Bridal Wear",
   description:
-    "Online Buy New Saree Salwar Suit Lehenga Choli Gown Kurti Collection | vastrang Fancy Designer Party Wear Wedding Wear Collection | vastrang online Store Buy 2026 latest collection for women Ethnic wear",
+    "Shop designer sarees, salwar suits, lehengas, blouses, and ethnic wear at Charmiqe.",
   icons: {
-    icon: "https://vastrang.in/cdn/shop/files/vastrang.in_2.jpg?crop=center&height=32&v=1785305911&width=32",
+    icon: "/charmiqe.svg",
   },
 };
 
