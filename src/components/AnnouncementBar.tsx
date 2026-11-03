@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function AnnouncementBar() {
-  const message = 'Buy 2 Get 1 FREE | Prepaid Orders Only';
+  const message = 'Free Shipping Across India | Cash on Delivery Available';
   const items = Array.from({ length: 8 }, (_, index) => `${message}-${index}`);
 
   return (

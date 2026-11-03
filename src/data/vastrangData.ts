@@ -1,3 +1,10 @@
+import dress1 from "@/app/dress/d1.jpeg";
+import dress2 from "@/app/dress/d2.jpeg";
+import dress3 from "@/app/dress/d3.jpeg";
+import dress4 from "@/app/dress/d4.jpeg";
+import dress5 from "@/app/dress/d5.jpeg";
+import dress6 from "@/app/dress/d6.jpeg";
+
 export interface Product {
   id: number;
   title: string;
@@ -57,7 +64,6 @@ export const STORE_INFO = {
 };
 
 export const ANNOUNCEMENTS = [
-  "✨ SPECIAL OFFER: BUY 2 GET 1 FREE ON SELECTED FESTIVE COLLECTIONS ✨",
   "🚚 FREE SHIPPING ACROSS INDIA ON ALL ORDERS ABOVE ₹499",
   "💳 CASH ON DELIVERY (COD) AVAILABLE ALL OVER INDIA",
   "🎉 USE CODE: FESTIVE10 FOR EXTRA 10% OFF ON PREPAID ORDERS"
@@ -121,7 +127,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     "mobileImage": "/images/First.jpeg",
     "title": "Grand Festive & Wedding Edit",
     "subtitle": "Pure Satin Silk, Georgette & Banarasi Elegance",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "ctaText": "Explore Collection",
     "ctaLink": "#trending"
   },
@@ -143,7 +149,7 @@ export const PRODUCTS: Product[] = [
     "title": "Luxury Party Wear Pure Satin Silk Ajrak Printed Rich Pallu n Original Mirror Work Designer Saree With Blouse Piece",
     "salePrice": "Rs. 1,999.00",
     "regularPrice": "MRP 4,000.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/IMG_4530_2d5f619e-52b8-4f5a-ac11-d426d3330f87.jpg?v=1792997560&width=3941",
     "hoverImage": "https://vastrang.in/cdn/shop/files/IMG_4528_e1a205ab-4c51-46c6-a3c2-45cf73cafce8.jpg?v=1792997560&width=4284",
     "colors": [
@@ -170,7 +176,7 @@ export const PRODUCTS: Product[] = [
     "title": "Entrancing Festive Wear Georgette Print Design Zarkan Diamond Work Fancy Saree With Contrast Blouse Piece",
     "salePrice": "Rs. 1,999.00",
     "regularPrice": "MRP 4,000.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-10-27at13.37.56.jpg?v=1793090642&width=1098",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-10-27at13.37.57_1.jpg?v=1793090642&width=1038",
     "colors": [
@@ -195,7 +201,7 @@ export const PRODUCTS: Product[] = [
     "title": "Graceful Party Wear Chanderi Cotton Embroidery Thread n Tussels Work Fancy Saree With Stitched Blouse For Occasion",
     "salePrice": "Rs. 2,249.00",
     "regularPrice": "MRP 4,300.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-10-22at15.08.19.jpg?v=1792664066&width=1200",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-10-22at15.08.18.jpg?v=1792664066&width=1200",
     "colors": [
@@ -218,7 +224,7 @@ export const PRODUCTS: Product[] = [
     "title": "Entrancing Wedding Wear Georgette Embroidery n Thread Work Designer Saree With Contrast Blouse Piece",
     "salePrice": "Rs. 1,999.00",
     "regularPrice": "MRP 4,000.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-09-23at07.16.19.jpg?v=1790145371&width=960",
     "hoverImage": "https://vastrang.in/cdn/shop/files/be7df35a-db7c-4dfd-a375-a76bc18b02f5.jpg?v=1793115587&width=3024",
     "colors": [
@@ -245,7 +251,7 @@ export const PRODUCTS: Product[] = [
     "title": "Mellifluous Wedding Wear Silk Print Embroidery n Sequence Work Zari Border Saree With Blouse Piece",
     "salePrice": "Rs. 1,999.00",
     "regularPrice": "MRP 5,999.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-10-15at17.38.25.jpg?v=1792066792&width=1294",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-10-15at17.38.25_1.jpg?v=1792066792&width=1026",
     "colors": [
@@ -271,7 +277,7 @@ export const PRODUCTS: Product[] = [
     "title": "Party Wear Sky Blue Color Chiffon Embroidery n Sequence Work Fancy Designer Saree",
     "salePrice": "Rs. 1,899.00",
     "regularPrice": "MRP 2,500.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/preview_images/9600fb3bc29f442790c798f4eab89c27.thumbnail.0000000000.jpg?v=1720272570",
     "hoverImage": "https://vastrang.in/cdn/shop/files/IMG_3181.jpg?v=1761552365&width=2793",
     "colors": [
@@ -295,7 +301,7 @@ export const PRODUCTS: Product[] = [
     "title": "New Chanderi Cotton Embroidery n Tussels Work Fancy Designer Festive Wear Saree With Stitched Blouse",
     "salePrice": "Rs. 2,099.00",
     "regularPrice": "MRP 6,500.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsApp_Image_2025-06-19_at_12.26.00_PM.jpg?v=1750316683&width=2515",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsAppImage2025-06-04at6.47.35PM.jpg?v=1749216622&width=2583",
     "colors": [
@@ -334,7 +340,7 @@ export const PRODUCTS: Product[] = [
     "title": "Wedding Wear Purple Color Kanjivaram Silk Pure Zari Weaving with Beautiful Meena Weaving Saree",
     "salePrice": "Rs. 2,499.00",
     "regularPrice": "MRP 3,000.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/preview_images/39ae2c1eea5b420083cad982caa1c466.thumbnail.0000000000.jpg?v=1685344599",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsAppImage2025-03-06at6.27.01PM_2.jpg?v=1741266816&width=3024",
     "colors": [
@@ -357,7 +363,7 @@ export const PRODUCTS: Product[] = [
     "title": "New Wedding Wear Banarasi Kota Tissue Silk Zari Weaving Saree With Blouse",
     "salePrice": "Rs. 1,299.00",
     "regularPrice": "MRP 4,000.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/1_6070a121-485a-4994-8f87-b99254d3ed04.jpg?v=1739338016&width=600",
     "hoverImage": "https://vastrang.in/cdn/shop/files/preview_images/25693311b74c43af9ab09209d5bf5d15.thumbnail.0000000000.jpg?v=1717480627",
     "colors": [
@@ -381,7 +387,7 @@ export const PRODUCTS: Product[] = [
     "title": "Marvellous Wedding Wear Pure Crunchy Silk Embroidery Work Fancy Desginer Saree With Blouse",
     "salePrice": "Rs. 1,799.00",
     "regularPrice": "MRP 3,200.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/1_d62c3923-0759-475c-b54d-99d5e767026c.jpg?v=1754048611&width=4284",
     "hoverImage": "https://vastrang.in/cdn/shop/files/preview_images/b5459dc30a034e4b9b5f6eb30e03b76a.thumbnail.0000000000.jpg?v=1754048648",
     "colors": [
@@ -407,7 +413,7 @@ export const PRODUCTS: Product[] = [
     "title": "Gratifying Function Wear Pure Satin Silk Ajrak Printed Rich Pallu n Mirror Work Designer Saree With Blouse Piece",
     "salePrice": "Rs. 1,499.00",
     "regularPrice": "MRP 6,000.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-05-20at1.38.46PM.jpg?v=1779271110&width=960",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsApp_Image_2026-05-21_at_1.45.11_PM_2.jpg?v=1779352333&width=960",
     "colors": [
@@ -436,7 +442,7 @@ export const PRODUCTS: Product[] = [
     "title": "Artisanal Function Wear Pure Satin Silk Ajrak Printed Rich Pallu n Mirror Work Designer Saree",
     "salePrice": "Rs. 1,499.00",
     "regularPrice": "MRP 6,200.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/IMG_1477_f61e214d-d3a2-41dd-a839-7a9a79896090.jpg?v=1781681269&width=4099",
     "hoverImage": "https://vastrang.in/cdn/shop/files/IMG_1127_b1406c63-f29a-4bac-8241-f361dbe6ad4c.jpg?v=1781089311&width=4207",
     "colors": [
@@ -460,7 +466,7 @@ export const PRODUCTS: Product[] = [
     "title": "Blossom Party Wear Faux Georgette Sequence Heavy Border n Real Mirror Work Fancy Designer Saree With Unstitched Blouse",
     "salePrice": "Rs. 1,999.00",
     "regularPrice": "MRP 6,500.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/red_bb63f408-026f-4f39-bb0d-55dd0760fa8a.jpg?v=1759314810&width=3024",
     "hoverImage": "https://vastrang.in/cdn/shop/files/wine_f2231ce4-93fb-4d97-bd8b-95c515d956ef.jpg?v=1759314810&width=3024",
     "colors": [
@@ -489,7 +495,7 @@ export const PRODUCTS: Product[] = [
     "title": "Confounding Festive Wear Crunchy Crush Embroidery Thread Work Lace Border Siroski Designer Saree With Blouse Piece",
     "salePrice": "Rs. 1,599.00",
     "regularPrice": "MRP 4,999.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-07-31at12.27.33PM.jpg?v=1785486064&width=1128",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-07-31at12.27.33PM_1.jpg?v=1785486064&width=1046",
     "colors": [
@@ -513,7 +519,7 @@ export const PRODUCTS: Product[] = [
     "title": "New Chanderi Cotton Embroidery n Tussels Work Fancy Designer Festive Wear Saree With Stitched Blouse",
     "salePrice": "Rs. 2,099.00",
     "regularPrice": "MRP 6,500.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsApp_Image_2025-06-19_at_12.26.00_PM.jpg?v=1750316683&width=2515",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsAppImage2025-06-04at6.47.35PM.jpg?v=1749216622&width=2583",
     "colors": [
@@ -552,7 +558,7 @@ export const PRODUCTS: Product[] = [
     "title": "Latest Function wear Viscose Georgette Jacquard Weaving Work Fancy Designer Saree",
     "salePrice": "Rs. 1,099.00",
     "regularPrice": "MRP 3,000.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsAppImage2024-07-09at9.43.04PM_1.jpg?v=1720593716&width=1200",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsAppImage2024-07-09at9.43.05PM_2.jpg?v=1720593716&width=1200",
     "colors": [
@@ -577,7 +583,7 @@ export const PRODUCTS: Product[] = [
     "title": "Partywear Red Color Soft Net Sequence Work Fancy Designer Saree With Embroidered Blouse",
     "salePrice": "Rs. 1,599.00",
     "regularPrice": "MRP 3,000.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/preview_images/13d946f081ef4c6888d54162a90353f4.thumbnail.0000000000.jpg?v=1691049535",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsAppImage2025-02-20at5.42.38PM.jpg?v=1740137865&width=3120",
     "colors": [
@@ -604,7 +610,7 @@ export const PRODUCTS: Product[] = [
     "title": "Charming Festive Wear  Cotton Embroidery Work Designer Straight Kurta With Trouser n Dupatta Set",
     "salePrice": "Rs. 2,099.00",
     "regularPrice": "MRP 4,999.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-08-18at1.07.14PM_1.jpg?v=1788610390&width=3024",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsApp_Image_2024-09-18_at_2.17.37_PM_de94b3f0-c8d7-4a13-9e95-e51ea8438be0.jpg?v=1788609535&width=1600",
     "colors": [
@@ -631,7 +637,7 @@ export const PRODUCTS: Product[] = [
     "title": "Splendorous Festive Wear Roman Silk Embroidery n Sequence Work Designer Straight Kurta With Trouser n Dupatta Set",
     "salePrice": "Rs. 2,099.00",
     "regularPrice": "MRP 4,999.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-10-08at12.06.23_2.jpg?v=1791528790&width=3024",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsApp_Image_2024-09-18_at_2.17.37_PM_1024x1024_2x_1024x1024_2x_71357185-8f94-4ff2-8a66-a0740d6cdad7.webp?v=1791528322&width=1600",
     "colors": [
@@ -656,7 +662,7 @@ export const PRODUCTS: Product[] = [
     "title": "New Wedding Wear Roman Silk Embroidery n Sequence Work Designer Straight Kurta With Trouser Dupatta Set",
     "salePrice": "Rs. 2,099.00",
     "regularPrice": "MRP 4,999.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-05-29at11.02.32AM_d18c7776-956f-47fd-9b28-c8811e401826.jpg?v=1788609214&width=3024",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsApp_Image_2024-09-18_at_2.17.37_PM_c919d027-3506-4b13-ac4d-fd6d842777c3.jpg?v=1788609256&width=1600",
     "colors": [
@@ -683,7 +689,7 @@ export const PRODUCTS: Product[] = [
     "title": "New Festive Wear Wine Color Roman Silk Embroidery n Sequence Work Designer Straight Kurta With Trouser n Dupatta Set",
     "salePrice": "Rs. 999.00",
     "regularPrice": "MRP 3,500.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsAppImage2025-02-14at10.56.10AM_1.jpg?v=1739775632&width=3120",
     "hoverImage": "https://vastrang.in/cdn/shop/files/preview_images/cc3e08eba97042f5b3e736b24c824aeb.thumbnail.0000000000.jpg?v=1741333486",
     "colors": [
@@ -709,7 +715,7 @@ export const PRODUCTS: Product[] = [
     "title": "Heritage Function Wear Cotton Embroidery Work Fancy  Straight Kurta With Trouser n Dupatta Set",
     "salePrice": "Rs. 2,099.00",
     "regularPrice": "MRP 4,100.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-10-01at08.29.07_2_7659707e-7541-4b50-b6b7-94d357a289ce.jpg?v=1790855111&width=960",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-10-01at08.29.08_2_21658bc5-8e56-4264-9900-8821f0757b6d.jpg?v=1790855112&width=960",
     "colors": [
@@ -734,7 +740,7 @@ export const PRODUCTS: Product[] = [
     "title": "Scrupulous Festive Wear Cotton Embroidery Work Designer Straight Kurta With Trouser Dupatta Set",
     "salePrice": "Rs. 2,099.00",
     "regularPrice": "MRP 4,999.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsApp_Image_2026-08-18_at_1.36.29_PM_5.jpg?v=1788755212&width=960",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsApp_Image_2024-09-18_at_2.17.37_PM_35c54ebe-9295-495c-974c-1c7072ad48ac.jpg?v=1788598711&width=1600",
     "colors": [
@@ -761,7 +767,7 @@ export const PRODUCTS: Product[] = [
     "title": "Latest Function Wear Teal Blue Color Cotton Embroidery n Sequence Work Designer Straight Kurta With Trouser n Dupatta Set",
     "salePrice": "Rs. 999.00",
     "regularPrice": "MRP 3,500.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsAppImage2025-04-11at5.27.36PM_1.jpg?v=1744437120&width=3120",
     "hoverImage": "https://vastrang.in/cdn/shop/files/preview_images/0aae887d685e44d0bfecad7d9cfe67e1.thumbnail.0000000000.jpg?v=1744437064",
     "colors": [
@@ -809,7 +815,7 @@ export const PRODUCTS: Product[] = [
     "title": "Festive Wear Georgette Mirror & Foil Work Flared Lehenga Choli with Stitched Blouse",
     "salePrice": "Rs. 2,999.00",
     "regularPrice": "MRP 6,500.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/pink_02e0dde9-4001-4e9f-bbef-cfe554150558.jpg?v=1793514531&width=1200",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsAppImage2026-10-27at13.37.56.jpg?v=1793090642&width=1098",
     "colors": ["Pink", "Yellow", "Lavender", "Teal"],
@@ -872,7 +878,7 @@ export const PRODUCTS: Product[] = [
     "title": "Pure Raw Silk Heavy Thread & Hand Zari Work Ready-to-Wear Stitched Designer Blouse",
     "salePrice": "Rs. 999.00",
     "regularPrice": "MRP 2,499.00",
-    "badge": "BUY 2 GET 1 FREE",
+    "badge": "",
     "image": "https://vastrang.in/cdn/shop/files/WhatsApp_Image_2025-06-19_at_12.26.00_PM.jpg?v=1750316683&width=1200",
     "hoverImage": "https://vastrang.in/cdn/shop/files/WhatsAppImage2025-06-04at6.47.35PM.jpg?v=1749216622&width=1200",
     "colors": ["Gold", "Red", "Black", "Bottle Green", "Royal Blue"],
@@ -981,7 +987,6 @@ export const MARQUEE_ITEMS = [
   "🚚 FREE SHIPPING ALL OVER INDIA",
   "💳 CASH ON DELIVERY AVAILABLE",
   "❤️ TRUSTED BY 2 LAKH+ PATRONS",
-  "🔥 BUY 2 GET 1 FREE",
   "⭐ 100% PURE SILK & QUALITY PROMISE",
   "⚡ DISPATCH WITHIN 24 HOURS"
 ];
@@ -1046,7 +1051,7 @@ export const TESTIMONIALS = [
     name: "Ananya Iyer",
     location: "Chennai",
     rating: 5,
-    comment: "Super fast delivery to Chennai within 3 days. Fabric is very rich, soft, and feels luxurious. The Buy 2 Get 1 offer is absolutely genuine!",
+    comment: "Super fast delivery to Chennai within 3 days. Fabric is very rich, soft, and feels luxurious.",
     product: "Banarasi Kota Tissue Silk Saree",
     verified: true
   },
@@ -1065,37 +1070,37 @@ export const HOME_COLLECTIONS = [
   {
     id: "featured-collection",
     name: "Featured Collection",
-    image: PRODUCTS[0].image,
+    image: dress1,
     badge: "Featured",
   },
   {
     id: "trending-collection",
     name: "Trending Collection",
-    image: PRODUCTS.find((product) => product.isTrending)?.image ?? PRODUCTS[0].image,
+    image: dress2,
     badge: "Trending",
   },
   {
     id: "clearance-sale",
     name: "Clearance Sale",
-    image: PRODUCTS.find((product) => product.isClearance)?.image ?? PRODUCTS[0].image,
+    image: dress3,
     badge: "Sale",
   },
   {
     id: "best-seller",
     name: "Best Seller",
-    image: PRODUCTS.find((product) => product.isBestSeller)?.image ?? PRODUCTS[0].image,
+    image: dress4,
     badge: "Popular",
   },
   {
     id: "new-collection",
     name: "New Collection",
-    image: PRODUCTS[PRODUCTS.length - 1].image,
+    image: dress5,
     badge: "New",
   },
   {
     id: "salwar-suit",
     name: "Salwar Suit",
-    image: PRODUCTS.find((product) => product.isSalwarSuit)?.image ?? PRODUCTS[0].image,
+    image: dress6,
     badge: "Collection",
   },
 ];
