@@ -61,7 +61,7 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
     <div className="flex min-h-screen flex-col">
       <AnnouncementBar />
       <Navbar />
-      <main className="flex-1">
+      <main className="min-w-0 flex-1">
         <section className="relative isolate flex min-h-64 items-end overflow-hidden bg-stone-900 sm:min-h-80">
           <Image src={collection.image} alt="" fill sizes="100vw" preload className="z-0 object-cover" />
           <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/75 via-black/35 to-black/10" />
@@ -74,12 +74,12 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
 
         <section className="bg-white py-9 sm:py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mb-5 flex items-end justify-between gap-4">
-              <div>
+            <div className="mb-5 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
+              <div className="min-w-0">
                 <h2 className="font-serif text-xl font-bold text-stone-900 sm:text-2xl">{collection.name}</h2>
                 <p className="mt-1 text-xs text-stone-500">{products.length} products</p>
               </div>
-              <Link href="/" className="text-xs font-semibold text-[#7d4e48] hover:underline">Continue shopping</Link>
+              <Link href="/" className="shrink-0 text-xs font-semibold text-[#7d4e48] hover:underline">Continue shopping</Link>
             </div>
             {products.length > 0 ? (
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4 lg:gap-7">

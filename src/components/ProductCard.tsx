@@ -130,16 +130,16 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
 
       {/* Product Details Section */}
-      <div className="p-3 sm:p-4 flex flex-col flex-1 justify-between gap-2">
+      <div className="flex flex-1 flex-col justify-between gap-2 p-2.5 sm:p-4">
         <div>
           {/* Star Rating */}
-          <div className="flex items-center gap-1.5 mb-1.5">
+          <div className="mb-1.5 flex min-w-0 items-center gap-1">
             <div className="flex text-amber-500">
               {[...Array(5)].map((_, i) => (
                 <StarIcon key={i} className="w-3.5 h-3.5 fill-current" />
               ))}
             </div>
-            <span className="text-[11px] text-stone-500 font-medium">
+            <span className="truncate text-[10px] font-medium text-stone-500 sm:text-[11px]">
               {product.rating} ({product.reviewsCount})
             </span>
           </div>
@@ -182,13 +182,13 @@ export default function ProductCard({ product }: ProductCardProps) {
         )}
 
         {/* Price Row */}
-        <div className="pt-1 flex items-baseline justify-between border-t border-stone-100 mt-1">
-          <div className="flex items-baseline gap-2">
-            <span className="font-bold text-sm sm:text-base text-[#7d4e48]">
+        <div className="mt-1 flex flex-wrap items-center justify-between gap-x-1 gap-y-2 border-t border-stone-100 pt-2">
+          <div className="flex min-w-0 flex-wrap items-baseline gap-x-1.5">
+            <span className="text-sm font-bold text-[#7d4e48] sm:text-base">
               {product.salePrice}
             </span>
             {product.regularPrice && (
-              <span className="text-xs text-stone-400 line-through">
+              <span className="text-[10px] text-stone-400 line-through sm:text-xs">
                 {product.regularPrice}
               </span>
             )}

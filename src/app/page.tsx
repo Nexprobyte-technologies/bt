@@ -23,7 +23,7 @@ export default function Home() {
       <AnnouncementBar />
       <Navbar />
 
-      <main className="flex-1">
+      <main className="min-w-0 flex-1">
         <HeroSlider />
         <div id="categories"><CategoryList /></div>
 
@@ -84,7 +84,7 @@ export default function Home() {
         rel="noopener noreferrer"
         aria-label="Chat with Charmiqe on WhatsApp at +91 95148 79599"
         title="Chat with us on WhatsApp: +91 95148 79599"
-        className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:scale-105 hover:bg-[#1fb957] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]"
+        className="fixed bottom-[calc(4.5rem+env(safe-area-inset-bottom))] right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:scale-105 hover:bg-[#1fb957] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366] sm:bottom-5 sm:right-5 sm:h-14 sm:w-14"
       >
         <WhatsAppIcon className="h-7 w-7" />
       </a>

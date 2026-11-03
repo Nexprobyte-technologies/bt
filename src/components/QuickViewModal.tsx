@@ -273,7 +273,7 @@ export default function QuickViewModal() {
         onClick={closeQuickView}
       />
 
-      <div className="flex min-h-full items-center justify-center p-4 sm:p-6">
+      <div className="flex min-h-full items-center justify-center p-2 sm:p-6">
         <QuickViewContent
           key={quickViewProduct.id}
           product={quickViewProduct}

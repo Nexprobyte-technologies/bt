@@ -107,7 +107,7 @@ export default function HeroSlider() {
       <button
         onClick={prevSlide}
         aria-label="Previous slide"
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/80 hover:bg-white text-stone-800 shadow-md backdrop-blur-xs flex items-center justify-center opacity-70 group-hover:opacity-100 transition-all duration-200"
+        className="absolute left-2 top-1/2 z-20 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-stone-800 shadow-md backdrop-blur-xs transition-all duration-200 sm:left-4 sm:h-12 sm:w-12 sm:bg-white/80 sm:hover:bg-white sm:opacity-70 sm:group-hover:opacity-100"
       >
         <ChevronLeftIcon className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
@@ -115,7 +115,7 @@ export default function HeroSlider() {
       <button
         onClick={nextSlide}
         aria-label="Next slide"
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/80 hover:bg-white text-stone-800 shadow-md backdrop-blur-xs flex items-center justify-center opacity-70 group-hover:opacity-100 transition-all duration-200"
+        className="absolute right-2 top-1/2 z-20 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-stone-800 shadow-md backdrop-blur-xs transition-all duration-200 sm:right-4 sm:h-12 sm:w-12 sm:bg-white/80 sm:hover:bg-white sm:opacity-70 sm:group-hover:opacity-100"
       >
         <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>

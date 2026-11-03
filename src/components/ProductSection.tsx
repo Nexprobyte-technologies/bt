@@ -63,7 +63,7 @@ export default function ProductSection({
   }, [filteredProducts.length, isAutoPaused]);
 
   return (
-    <section id={id} className={`py-14 sm:py-20 ${bgColor} border-b border-stone-200/50`}>
+    <section id={id} className={`scroll-mt-20 border-b border-stone-200/50 py-10 sm:py-20 ${bgColor}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}

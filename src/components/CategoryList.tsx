@@ -5,7 +5,7 @@ import { HOME_COLLECTIONS } from '@/data/vastrangData';
 
 export default function CategoryList() {
   return (
-    <section className="bg-[#fcfaf7] py-10 sm:py-14 border-b border-stone-200/60">
+    <section className="scroll-mt-20 border-b border-stone-200/60 bg-[#fcfaf7] py-8 sm:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-7 sm:mb-9">
           <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#7d4e48] font-bold">Featured Collection</span>

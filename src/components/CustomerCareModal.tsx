@@ -36,7 +36,7 @@ export default function CustomerCareModal({
       {/* Backdrop */}
       <div className="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity" onClick={onClose} />
 
-      <div className="flex min-h-full items-center justify-center p-4 sm:p-6">
+      <div className="flex min-h-full items-center justify-center p-2 sm:p-6">
         <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden z-10 border border-stone-200">
           
           {/* Modal Header */}

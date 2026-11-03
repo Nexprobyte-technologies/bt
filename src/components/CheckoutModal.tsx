@@ -36,7 +36,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
       {/* Backdrop */}
       <div className="fixed inset-0 bg-black/70 backdrop-blur-xs transition-opacity" onClick={onClose} />
 
-      <div className="flex min-h-full items-center justify-center p-4 sm:p-6">
+      <div className="flex min-h-full items-center justify-center p-2 sm:p-6">
         <div className="relative w-full max-w-xl bg-white rounded-2xl shadow-2xl overflow-hidden z-10 border border-stone-200">
           
           {/* Header */}
@@ -85,7 +85,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="p-6 space-y-4 max-h-[75vh] overflow-y-auto">
+            <form onSubmit={handleSubmit} className="max-h-[75dvh] space-y-4 overflow-y-auto p-4 sm:p-6">
               {/* Order summary bar */}
               <div className="p-3 bg-stone-50 rounded-xl border border-stone-200 flex items-center justify-between text-xs">
                 <div>

@@ -34,7 +34,7 @@ export default function SearchModal() {
         onClick={() => setIsSearchOpen(false)}
       />
 
-      <div className="flex min-h-full items-start justify-center p-4 sm:p-6 pt-16 sm:pt-24">
+      <div className="flex min-h-full items-start justify-center p-2 pt-12 sm:p-6 sm:pt-24">
         <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden z-10 border border-stone-200">
           
           {/* Search Header */}
