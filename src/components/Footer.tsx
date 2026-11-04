@@ -78,9 +78,17 @@ export default function Footer() {
             {/* Column 1: Brand Info */}
             <div className="lg:col-span-2 space-y-4">
               <div className="flex flex-col">
-                <span className="font-serif text-2xl font-bold tracking-wider text-white">
-                  Charmiqe
-                </span>
+                 <a
+  href="/"
+  className="flex flex-col items-start text-left cursor-pointer mr-auto"
+  aria-label="Charmiqe home"
+>
+  <img
+    src="/charmiqe_navbar.png"
+    alt="Charmiqe Logo"
+    className="h-17 w-auto object-contain"
+  />
+</a>
                 <span className="text-[8px] tracking-[0.2em] text-stone-400 uppercase">
                   {STORE_INFO.tagline}
                 </span>

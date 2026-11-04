@@ -27,10 +27,17 @@ export default function Navbar() {
     <header className={`sticky top-0 z-40 bg-white transition-all duration-300 ${isScrolled ? 'shadow-md py-2' : 'border-b border-gray-100 py-3'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
-          <a href="/" className="flex flex-col items-start text-left cursor-pointer mr-auto" aria-label="Charmiqe home">
-            <span className="font-serif text-2xl md:text-3xl font-bold tracking-wider text-stone-900 leading-tight">Charmiqe</span>
-            <span className="text-[8px] tracking-[0.25em] text-stone-400 uppercase">Ethnic &amp; Bridal Wear</span>
-          </a>
+          <a
+  href="/"
+  className="flex flex-col items-start text-left cursor-pointer mr-auto"
+  aria-label="Charmiqe home"
+>
+  <img
+    src="/charmiqe_navbar.png"
+    alt="Charmiqe Logo"
+    className="h-17 w-auto object-contain"
+  />
+</a>
 
           <button
             onClick={() => setMobileMenuOpen(true)}

@@ -49,8 +49,7 @@ export interface HeroSlide {
 }
 
 export const STORE_INFO = {
-  name: "Charmiqe",
-  tagline: "Online Buy Sari, Salwar Suit, Gown, Lehengas, Kurti",
+  
   phone: "+91 95148 79599",
   whatsapp: "+91 95148 79599",
   email: "support@vastrang.in",
